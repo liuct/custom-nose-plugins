@@ -344,6 +344,7 @@ class FileOutputPlugin(nose.plugins.Plugin):
         try:
             setattr(test, 'failure_image', FAILURE_SNAPSHOT_NAME)
             setattr(test, 'case_start_time', case_start_time)
+            setattr(test, 'case_pass_dir', self._pass_report_path)
             setattr(test, 'case_fail_dir', self._fail_report_path)
             setattr(test, 'case_error_dir', self._error_report_path)
         except:
